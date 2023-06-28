@@ -61,11 +61,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_GRV  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,DM_PLY1 ,                          DM_PLY2 ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_SCLN ,KC_BSLS ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_CAPS ,KC_A    ,KC_R    ,KC_S    ,KC_T    ,KC_G    ,A(KC_TAB),                      LCA(KC_TAB),KC_M    ,KC_N    ,KC_E    ,KC_I    ,KC_O    ,KC_QUOT ,
+     KC_CAPS ,KC_A    ,KC_R    ,KC_S    ,KC_T    ,KC_G    ,KC_TAB  ,                          KC_ENT  ,KC_M    ,KC_N    ,KC_E    ,KC_I    ,KC_O    ,KC_QUOT ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      OS_LGUI ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,OS_LCTL ,OS_LALT ,        KC_DEL  ,KC_ESC  ,KC_K    ,KC_H    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_MINS ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     UNDO    ,REDO    ,TT(_NAV),TT(_NUM),     OS_LSFT ,    KC_BSPC ,NUM_TAB ,        NAV_ENT ,KC_SPC  ,    OS_RSFT ,     KC_HOME ,KC_END  ,KC_LBRC ,KC_RBRC 
+     UNDO    ,REDO    ,A(KC_TAB),LCA(KC_TAB), OS_LSFT ,    KC_BSPC ,OSL(_NUM),      OSL(_NAV),KC_SPC  ,    OS_RSFT ,     KC_HOME ,KC_END  ,KC_LBRC ,KC_RBRC 
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
@@ -85,15 +85,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_NAV] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                                           ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     KC_QWER ,_______ ,_______ ,_______ ,_______ ,_______ ,                                            _______ ,_______ ,_______ ,_______ ,_______ ,TG(_NAV),
+     KC_QWER ,KC_MPRV ,KC_MPLY ,KC_MSTP ,KC_MNXT ,_______ ,                                            _______ ,_______ ,_______ ,_______ ,_______ ,TG(_NAV),
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______ ,_______ ,_______ ,KC_UP   ,KC_APP  ,C_A_DEL ,DM_REC1 ,                          DM_REC2 ,O_BRACE ,KC_RPRN ,KC_LPRN ,KC_RBRC ,KC_LBRC ,KC_PSCR ,
+     ADJUST  ,_______ ,_______ ,KC_UP   ,KC_APP  ,C_A_DEL ,DM_REC1 ,                          DM_REC2 ,O_BRACE ,KC_RPRN ,KC_LPRN ,KC_RBRC ,KC_LBRC ,KC_PSCR ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_PGUP ,_______ ,KC_LEFT ,KC_DOWN ,KC_RIGHT,_______ ,_______ ,                          _______ ,C_BRACE ,KC_RCTL ,KC_RSFT ,KC_RALT ,KC_RGUI ,_______ ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_PGDN ,KC_EXLM ,KC_AT   ,KC_HASH ,KC_AMPR ,KC_CIRC ,_______ ,_______ ,        _______ ,_______ ,LCA(KC_V),C(KC_V),C(KC_C) ,C(KC_X) ,C(KC_A) ,_______ ,
+     KC_PGDN ,C(KC_A) ,C(KC_X) ,C(KC_C) ,C(KC_V) ,LCA(KC_V),_______,_______ ,        _______ ,_______ ,KC_CIRC ,KC_AMPR ,KC_HASH ,KC_AT   ,KC_EXLM ,_______ ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     _______ ,ADJUST  ,_______ ,_______ ,     _______ ,    _______ ,_______ ,        _______ ,_______ ,    _______ ,     _______ ,_______ ,DM_REC1 ,DM_REC2 
+     _______ ,ADJUST  ,_______ ,_______ ,   C(KC_BSPC),    _______ ,_______ ,        _______ ,_______ ,    _______ ,     _______ ,_______ ,DM_REC1 ,DM_REC2 
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
@@ -101,13 +101,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                                           ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_QWER ,KC_NUM  ,KC_PSCR ,KC_SCRL ,KC_PAUS ,KC_BRIU ,                                            KC_P000 ,KC_CIRC ,KC_AMPR ,KC_HASH ,KC_EXLM ,TG(_NUM),
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_MUTE ,KC_MPRV ,KC_MPLY ,KC_MSTP ,KC_MNXT ,KC_BRID ,_______ ,                          _______ ,KC_C000 ,KC_7    ,KC_8    ,KC_9    ,KC_PERC ,KC_DLR  ,
+     KC_MUTE ,O_BRACE ,C_BRACE ,KC_LCBR ,KC_RCBR ,KC_BRID ,_______ ,                          _______ ,KC_C000 ,KC_7    ,KC_8    ,KC_9    ,KC_PERC ,KC_DLR  ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_VOLU ,O_BRACE ,C_BRACE ,KC_LPRN ,KC_RPRN ,KC_INS  ,_______ ,                          _______ ,KC_COMM ,KC_4    ,KC_5    ,KC_6    ,KC_PAST ,KC_PPLS ,
+     KC_VOLU ,KC_LBRC ,KC_RBRC ,KC_LPRN ,KC_RPRN ,KC_INS  ,_______ ,                          _______ ,KC_COMM ,KC_4    ,KC_5    ,KC_6    ,KC_PAST ,KC_PPLS ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_VOLD ,KC_LCBR ,KC_RCBR ,KC_LBRC ,KC_RBRC ,KC_ENT  ,_______ ,_______ ,        _______ ,_______ ,KC_EQL  ,KC_1    ,KC_2    ,KC_3    ,KC_PSLS ,KC_PMNS ,
+     KC_VOLD ,C(KC_A) ,C(KC_X) ,C(KC_C) ,C(KC_V) ,LCA(KC_V),_______,_______ ,        _______ ,_______ ,KC_EQL  ,KC_1    ,KC_2    ,KC_3    ,KC_PSLS ,KC_PMNS ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     _______ ,ADJUST  ,_______ ,_______ ,     _______ ,    _______ ,_______ ,        _______ ,_______ ,    KC_PENT ,     KC_P0   ,KC_PDOT ,KC_PENT ,KC_CALC 
+     _______ ,ADJUST  ,TG(_NUM),TG(_NUM),   C(KC_BSPC),    _______ ,_______ ,        _______ ,_______ ,    KC_PENT ,     KC_P0   ,KC_PDOT ,KC_PENT ,KC_CALC 
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
@@ -115,11 +115,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                                           ┌────────┬────────┬────────┬────────┬────────┬────────┐
      XXXXXXX ,KC_F1   ,KC_F2   ,KC_F3   ,KC_F4   ,KC_F5   ,                                            KC_F6   ,KC_F7   ,KC_F8   ,KC_F9   ,KC_F10  ,XXXXXXX ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     XXXXXXX ,QK_BOOT ,RGB_M_P ,RGB_TOG ,RGB_MOD ,RGB_HUD ,RGB_HUI ,                          RGB_SAD ,RGB_SAI ,RGB_VAD ,RGB_VAI ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
+     XXXXXXX ,QK_BOOT ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,                          XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,                          XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,QK_BOOT ,_______ ,XXXXXXX ,        XXXXXXX ,_______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
+     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,QK_BOOT ,_______ ,XXXXXXX ,        XXXXXXX ,_______ ,QK_BOOT ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     XXXXXXX ,    XXXXXXX ,XXXXXXX ,        XXXXXXX ,XXXXXXX ,    XXXXXXX ,     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX 
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘

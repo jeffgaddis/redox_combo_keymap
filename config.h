@@ -22,7 +22,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
-#define TAPPING_TOGGLE 1
+#define TAPPING_TOGGLE 2
+#define ONESHOT_TAP_TOGGLE 2
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 #define COMBO_VARIABLE_LEN
