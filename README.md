@@ -4,6 +4,8 @@ To be inserted in ~/qmk_firmware/keyboards/redox/keymaps/jg-combos
 ## Keymap Features
 This Redox keymap uses Colemack-DH and emphasizes single key press actions instead of holding down keys. A QWERTY layer is also available (good for sharing the keyboard with other people).
 
+The combos used with this keyboard were calculated to be the most effecient using this generator: https://github.com/jeffgaddis/QMK_Combo_Generator/
+
 ## Other Recommendations
 This is my keyboard for traveling or working in the office. When I am at home I prefer to use my Dactyl Manuform along with a Super16 macro pad with 2 rotary encoders.
 
